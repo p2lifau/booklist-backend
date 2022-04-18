@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9&40@yuw#*4978tpx_9ub^@q%d090*gds0xf8+@o2!qvr4@zq0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'booklist-api-backend.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'booklist-backend-api.herokuapp.com']
 
 
 # Application definition
@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # add this
 CORS_ALLOW_ALL_ORIGINS = True  # add this
 
 ROOT_URLCONF = 'books_api.urls'
